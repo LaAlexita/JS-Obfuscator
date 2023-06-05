@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "javascript-obfuscator": "^4.0.2",
+    "js-confuser": "^1.5.9"
+  }
+}
