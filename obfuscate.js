@@ -15,7 +15,7 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
   if (err) {
     console.log('Error al leer el archivo:', err);
     process.exit(1);
-}
+  }
 
   const obfuscateCode = async (obfuscationOptions) => {
     try {
