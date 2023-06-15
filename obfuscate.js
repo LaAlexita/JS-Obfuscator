@@ -42,12 +42,9 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
   let obfuscationOptions;
 
   switch (encryptionLevel) {
-    case 1:
+   case 1:
       obfuscationOptions = {
-        compact: false,
-        simplify: false,
-        stringArray: false,
-        renameGlobals: true,
+        optionsPreset: 'low-obfuscation',
         preset: 'low',
         identifiersPrefix: 'Alexita',
         
@@ -55,10 +52,7 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
       break;
     case 2:
       obfuscationOptions = {
-        compact: true,
-        simplify: true,
-        stringArray: true,
-        renameGlobals: true,
+        optionsPreset: 'medium-obfuscation',
         preset: 'medium',
         identifiersPrefix: 'Alexita',
 
@@ -66,24 +60,7 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
       break;
     case 3:
       obfuscationOptions = {
-        compact: true,
-        simplify: true,
-        numbersToExpressions: true,
-        stringArrayIndexShift: true,
-        stringArrayRotate: true,
-        stringArrayShuffle: true,
-        stringArrayWrappersCount: 1,
-        stringArrayWrappersChainedCalls: true,
-        stringArrayWrappersParametersMaxCount: 2,
-        stringArrayWrappersType: 'variable',
-        stringArrayThreshold: 0.75,
-        target: 'node',
-        splitStringsChunkLength: 10,
-        stringArray: true,
-        stringArrayCallsTransform: true,
-        optionsPreset: 'default',
-        renameGlobals: true,
-        renameProperties: true,
+        optionsPreset: 'high-obfuscation',
         identifiersPrefix: 'Alexita',
         preset: 'high',
       };
